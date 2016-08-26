@@ -1,0 +1,27 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+label.wide {
+    display: block;
+    width: 100%;
+}
+button.wide {
+    width: 100%;
+}
+.collection a.collection-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-width: 0px;
+}
