@@ -21,7 +21,7 @@
   </nav>
   
   <div class="container">
-      <form class="col s12">
+      <form class="col s12" id="the_form">
         <div class="row">
           <div class="input-field col s6">
             <input id="name" type="text" class="validate">
@@ -40,7 +40,7 @@
             <p>
               I'm interested in (mark all that apply):
             </p>
-            <div class="collection">
+            <div class="collection" id="interests">
               <a href="#!" class="collection-item">
                 <input type="checkbox" class="filled-in" id="puppies" />
                 <label for="puppies" class="wide">puppies (under 4
@@ -91,17 +91,17 @@
             <div class="collection">
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="fostering"
-                       id="yes" />
-                <label for="yes" class="wide">Yes</label>
+                       value="Yes" id="yes" />
+                <label for="yes" class="wide">yes</label>
               </a>
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="fostering"
-                       id="maybe" />
+                       value="maybe" id="maybe" />
                 <label for="maybe" class="wide">Maybe, tell me more</label>
               </a>
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="fostering"
-                       id="no" />
+                       value="no" id="no" />
                 <label for="no" class="wide">No, thank you</label>
               </a>
             </div>
@@ -110,13 +110,15 @@
             <p>
               I currently live with (mark all that apply):
             </p>
-            <div class="collection">
+            <div class="collection" id="lives_with">
               <a href="#!" class="collection-item">
-                <input type="checkbox" class="filled-in" id="other-dogs" />
+                <input type="checkbox" class="filled-in"
+                id="other-dogs" value="other dogs" />
                 <label for="other-dogs" class="wide">other dogs</label>
               </a>
               <a href="#!" class="collection-item">
-                <input type="checkbox" class="filled-in" id="other-cats" />
+                <input type="checkbox" class="filled-in"
+                id="other-cats" value="other cats" />
                 <label for="other-cats" class="wide">other cats</label>
               </a>
               <a href="#!" class="collection-item">
@@ -143,12 +145,12 @@
             <div class="collection">
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="lifestyle"
-                       id="active" />
+                       value="active" id="active" />
                 <label for="active" class="wide">active</label>
               </a>
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="lifestyle"
-                       id="laid-back"/>
+                       value="laid-back" id="laid-back"/>
                 <label for="laid-back" class="wide">laid back</label>
               </a>
             </div>

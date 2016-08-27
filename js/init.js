@@ -11,7 +11,27 @@
                     $('button').addClass('disabled');
             }
         );
-
+        $('#the_form').submit(
+            function(event) {
+                event.preventDefault();
+                $('button').addClass('disabled');
+                $('button').html('Please, wait...');
+                $.post('https://apaservices.waltermoreira.net/insert',
+                       {
+                           name: $('#name').val(),
+                           email: $('#email').val(),
+                           interests: $('div#interests input:checked ~ label').map(clean).get().join(", "),
+                           "lives_with": $('div#lives_with input:checked ~ label').map(clean).get().join(", "),
+                           lifestyle: $('input[name="lifestyle"]:checked').val(),
+                           fostering: $('input[name="fostering"]:checked').val(),
+                           _token: "apasaveslives"
+                       })
+                    .done(function(data) {
+                        alert('ok: '+JSON.stringify(data)); })
+                    .fail(function(data) {
+                        alert("error: "+JSON.stringify(data)); });
+            }
+        );
     }); // end of document ready
 })(jQuery); // end of jQuery name space
 
@@ -37,4 +57,8 @@ function all_filled() {
         }
     );
     return filled && fostering && lifestyle;
+}
+
+function clean() {
+    return $(this).html().replace(/\s+/g, ' ').trim();
 }
