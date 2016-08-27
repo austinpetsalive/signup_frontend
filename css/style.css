@@ -21,7 +21,7 @@ button.wide {
     width: 100%;
 }
 .collection a.collection-item {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-bottom-width: 0px;
 }
