@@ -27,11 +27,17 @@
                            _token: "apasaveslives"
                        })
                     .done(function(data) {
-                        window.location.href = "./thanks.html"; })
+                        $('#modal1').openModal();
+                        setTimeout(function() {
+                            $('#modal1').closeModal();
+                            window.location.href = './index.html';
+                        }, 5000) })
                     .fail(function(data) {
                         alert("error: "+JSON.stringify(data)); });
             }
         );
+
+        
     }); // end of document ready
 })(jQuery); // end of jQuery name space
 
@@ -62,3 +68,4 @@ function all_filled() {
 function clean() {
     return $(this).html().replace(/\s+/g, ' ').trim();
 }
+
