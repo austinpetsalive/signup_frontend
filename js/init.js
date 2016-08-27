@@ -1,20 +1,24 @@
 (function($){
     $(function(){
 
+        $('.modal-trigger').leanModal({
+            complete: function() { window.location.href = './index.html'; }
+        });
+        
         $('.button-collapse').sideNav();
-        $('button#form-submit').addClass('disabled');
+        $('button#form-submit').addClass('disabled').prop('disabled', true);
         $('input').change(
             function() {
                 if (all_filled())
-                    $('button').removeClass('disabled');
+                    $('button').removeClass('disabled').prop('disabled', false);
                 else
-                    $('button').addClass('disabled');
+                    $('button').addClass('disabled').prop('disabled', true);
             }
         );
         $('#the_form').submit(
             function(event) {
                 event.preventDefault();
-                $('button').addClass('disabled');
+                $('button').addClass('disabled').prop('disabled', true);
                 $('button').html('Please, wait...');
                 $.post('https://apaservices.waltermoreira.net/insert',
                        {
@@ -27,10 +31,9 @@
                            _token: "apasaveslives"
                        })
                     .done(function(data) {
-                        $('#modal1').openModal();
+                        $('#trigger').click();
                         setTimeout(function() {
-                            $('#modal1').closeModal();
-                            window.location.href = './index.html';
+                            $('#modal-dismiss').click();
                         }, 5000) })
                     .fail(function(data) {
                         alert("error: "+JSON.stringify(data)); });
