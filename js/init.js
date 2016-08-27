@@ -2,7 +2,7 @@
     $(function(){
 
         $('.button-collapse').sideNav();
-        $('button').addClass('disabled');
+        $('button#form-submit').addClass('disabled');
         $('input').change(
             function() {
                 if (all_filled())
@@ -27,7 +27,7 @@
                            _token: "apasaveslives"
                        })
                     .done(function(data) {
-                        alert('ok: '+JSON.stringify(data)); })
+                        window.location.href = "./thanks.html"; })
                     .fail(function(data) {
                         alert("error: "+JSON.stringify(data)); });
             }
