@@ -25,3 +25,11 @@ button.wide {
     padding-bottom: 3px;
     border-bottom-width: 0px;
 }
+label {
+    color: black;
+}
+
+.input-field label {
+    color: black;
+    /* font-weight: bold; */
+}
