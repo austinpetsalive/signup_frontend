@@ -40,7 +40,12 @@
             }
         );
 
-        
+        $("#name, #email").keyup(function (e) {
+            if (e.keyCode == 13) {
+                $(this).blur();
+            }
+        });
+
     }); // end of document ready
 })(jQuery); // end of jQuery name space
 
