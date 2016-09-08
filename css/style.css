@@ -33,3 +33,11 @@ label {
     color: black;
     /* font-weight: bold; */
 }
+.my-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.carousel {
+    height: 250px;
+}

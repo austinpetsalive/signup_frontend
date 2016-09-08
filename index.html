@@ -25,12 +25,12 @@
     </div>
   </nav>
   
-  <div class="container">
+  <div class="my-container">
       <form class="col s12" id="the_form">
         <div class="row">
           <div class="input-field col s6">
             <input id="name" type="text" class="validate">
-            <label for="name"><b>First and Last Name</b> (required)</label>
+            <label for="name" class="truncate"><b>First and Last Name</b> (required)</label>
           </div>
           <div class="input-field col s6">
               <input id="email" type="email" class="validate" style="margin-bottom:5px;">
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col s12 m6 l6">
+          <div class="col s12 m4 l4">
             <p>
               I'm interested in (mark all that apply):
             </p>
@@ -91,27 +91,23 @@
               </a>
             </div>
             <p>
-              <b>Are you interested in fostering?</b> (required)
+                Do you want to subscribe to APA! newsletter?:
             </p>
             <div class="collection">
               <a href="#!" class="collection-item">
-                <input type="radio" class="with-gap" name="fostering"
-                       value="Yes" id="yes" />
-                <label for="yes" class="wide">yes</label>
+                <input type="radio" class="with-gap" name="newsletter"
+                       value="yes-newsletter" id="yes-newsletter" />
+                <label for="yes-newsletter" class="wide">Yes, subscribe me!</label>
               </a>
               <a href="#!" class="collection-item">
-                <input type="radio" class="with-gap" name="fostering"
-                       value="maybe" id="maybe" />
-                <label for="maybe" class="wide">Maybe, tell me more</label>
-              </a>
-              <a href="#!" class="collection-item">
-                <input type="radio" class="with-gap" name="fostering"
-                       value="no" id="no" />
-                <label for="no" class="wide">No, thank you</label>
+                <input type="radio" class="with-gap" name="newsletter"
+                       value="no-newsletter" id="no-newsletter"
+                       checked />
+                <label for="no-newsletter" class="wide">No, thank you</label>
               </a>
             </div>
           </div>
-          <div class="col s12 m6 l6">
+          <div class="col s12 m4 l4">
             <p>
               I currently live with (mark all that apply):
             </p>
@@ -129,7 +125,7 @@
               <a href="#!" class="collection-item">
                 <input type="checkbox" class="filled-in" id="small-pets" />
                 <label for="small-pets" class="wide truncate">small pets
-                (birds, gerbils, guinea pigs, etc)</label>
+                (birds, gerbils, etc)</label>
               </a>
               <a href="#!" class="collection-item">
                 <input type="checkbox" class="filled-in" id="kids" />
@@ -159,8 +155,70 @@
                 <label for="laid-back" class="wide">laid back</label>
               </a>
             </div>
+            <p>
+              <b>Are you interested in fostering?</b> (required)
+            </p>
+            <div class="collection">
+              <a href="#!" class="collection-item">
+                <input type="radio" class="with-gap" name="fostering"
+                       value="Yes" id="yes" />
+                <label for="yes" class="wide">yes</label>
+              </a>
+              <a href="#!" class="collection-item">
+                <input type="radio" class="with-gap" name="fostering"
+                       value="maybe" id="maybe" />
+                <label for="maybe" class="wide">Maybe, tell me more</label>
+              </a>
+              <a href="#!" class="collection-item">
+                <input type="radio" class="with-gap" name="fostering"
+                       value="no" id="no" />
+                <label for="no" class="wide">No, thank you</label>
+              </a>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card deep-purple lighten-5">
+              <div class="card-content">
+                <p style="font-weight: bold">Featured pets
+                  of the week
+                </p>
+                <p>Ask about us!</p>
+                <div class="carousel">
+                  
+                  <div class="carousel-item" >
+                    <a class=""
+                       href="#one!"><img src="featured/beyonce.jpg"></a>
+                    <p class="center">
+                      Beyonce
+                    </p>
+                  </div>
+                  <div class="carousel-item" >
+                    <a class=""
+                       href="#one!"><img src="featured/fennec.jpg"></a>
+                    <p class="center">
+                      Fennec
+                    </p>
+                  </div>
+                  <div class="carousel-item" >
+                    <a class=""
+                       href="#one!"><img src="featured/izzy.jpg"></a>
+                    <p class="center">
+                      Izzy
+                    </p>
+                  </div>
+                  <div class="carousel-item" >
+                    <a class=""
+                       href="#one!"><img src="featured/max.jpg"></a>
+                    <p class="center">
+                      Max
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div>
-              <img src="apa_banner.png" class="responsive-img" />
+              <img src="apa_banner.png" class="responsive-img"
+              style="padding-top: 10px" />
             </div>
             <p>
               <button id="form-submit" class="btn waves-effect waves-light btn-large
