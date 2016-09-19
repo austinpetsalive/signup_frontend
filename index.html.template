@@ -96,12 +96,12 @@
             <div class="collection">
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="newsletter"
-                       value="yes-newsletter" id="yes-newsletter" />
+                       value="yes" id="yes-newsletter" />
                 <label for="yes-newsletter" class="wide">Yes, subscribe me!</label>
               </a>
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="newsletter"
-                       value="no-newsletter" id="no-newsletter"
+                       value="no" id="no-newsletter"
                        checked />
                 <label for="no-newsletter" class="wide">No, thank you</label>
               </a>
