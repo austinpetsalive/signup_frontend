@@ -28,6 +28,7 @@
                            "lives_with": $('div#lives_with input:checked ~ label').map(clean).get().join(", "),
                            lifestyle: $('input[name="lifestyle"]:checked').val(),
                            fostering: $('input[name="fostering"]:checked').val(),
+                           newsletter: $('input[name="newsletter"]:checked').val(),
                            _token: "apasaveslives"
                        })
                     .done(function(data) {
