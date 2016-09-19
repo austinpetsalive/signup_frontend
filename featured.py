@@ -104,6 +104,13 @@ def get_files(service, since=None):
     with open('index.html', 'w') as out:
         out.write(template.format(CAROUSEL=''.join(pics)))
     
-                  
-        
-    
+
+if __name__ == '__main__':
+    srv = get_service(get_credentials())
+    try:
+        last = datetime.datetime.fromtimestamp(float(open('last').readline()))
+    except IOError:
+        last = None
+    get_files(srv, last)
+    with open('last', 'w') as out:
+        out.write(str(datetime.datetime.now().timestamp()))
