@@ -6,6 +6,10 @@
  * Made By MaterializeCSS.com
  */
 
+html {
+    touch-action: manipulation;
+}
+
 .icon-block {
   padding: 0 15px;
 }

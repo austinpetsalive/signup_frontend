@@ -1,8 +1,18 @@
 (function($){
     $(function(){
 
-        $('.modal-trigger').leanModal({
+        $('#trigger').leanModal({
             complete: function() { window.location.href = './index.html'; }
+        });
+
+        $('#tos-trigger').leanModal({
+            dismissible: false,
+            complete: function() { 
+                $('#trigger').click();
+                setTimeout(function() {
+                    $('#modal-dismiss').click();
+                }, 5000);
+            }
         });
         
         $('.button-collapse').sideNav();
@@ -20,6 +30,7 @@
                 event.preventDefault();
                 $('button').addClass('disabled').prop('disabled', true);
                 $('button').html('Please, wait...');
+                $('#tos-trigger').click();
                 $.post('https://apaservices.waltermoreira.net/insert',
                        {
                            name: $('#name').val(),
@@ -32,10 +43,7 @@
                            _token: "apasaveslives"
                        })
                     .done(function(data) {
-                        $('#trigger').click();
-                        setTimeout(function() {
-                            $('#modal-dismiss').click();
-                        }, 5000) })
+                    })
                     .fail(function(data) {
                         alert("error: "+JSON.stringify(data)); });
             }
