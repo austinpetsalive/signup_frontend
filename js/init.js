@@ -1,13 +1,22 @@
 (function($){
     $(function(){
 
+        var posted;
+        
         $('#trigger').leanModal({
             complete: function() { window.location.href = './index.html'; }
         });
 
         $('#tos-trigger').leanModal({
             dismissible: false,
-            complete: function() { 
+            complete: function() {
+                posted.done(
+                    function(data) { }
+                ).fail(
+                    function (data) {
+                        alert("error: "+JSON.stringify(data));
+                    }
+                );
                 $('#trigger').click();
                 setTimeout(function() {
                     $('#modal-dismiss').click();
@@ -31,7 +40,7 @@
                 $('button').addClass('disabled').prop('disabled', true);
                 $('button').html('Please, wait...');
                 $('#tos-trigger').click();
-                $.post('https://apaservices.waltermoreira.net/insert',
+                posted = $.post('https://apaservices.waltermoreira.net/insert',
                        {
                            name: $('#name').val(),
                            email: $('#email').val(),
@@ -41,11 +50,7 @@
                            fostering: $('input[name="fostering"]:checked').val(),
                            newsletter: $('input[name="newsletter"]:checked').val(),
                            _token: "apasaveslives"
-                       })
-                    .done(function(data) {
-                    })
-                    .fail(function(data) {
-                        alert("error: "+JSON.stringify(data)); });
+                       });
             }
         );
 
