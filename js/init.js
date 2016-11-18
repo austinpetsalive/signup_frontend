@@ -60,7 +60,27 @@
             }
         });
         
-        $('.carousel').carousel();
+        $('.carousel').carousel({time_constant: 500});
+        
+        var timer = setInterval(function() { $('.carousel').carousel('next') }, 2000);
+        var resume;
+        
+        function stop_resume() {
+            clearInterval(timer);
+            clearTimeout(resume);
+            resume = setTimeout(function() {
+                timer = setInterval(function() {
+                    $('.carousel').carousel('next')
+                }, 2000);
+            }, 5000);
+        };
+        
+        $('.carousel').click(function() {
+            stop_resume();
+        });
+
+        $('.carousel').on({'touchstart': function() { stop_resume() }});
+        $('.carousel').on({'touchmove': function() { stop_resume() }});
         
     }); // end of document ready
 })(jQuery); // end of jQuery name space
