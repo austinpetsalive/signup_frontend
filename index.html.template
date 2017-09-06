@@ -155,10 +155,13 @@
                 <label for="laid-back" class="wide">laid back</label>
               </a>
             </div>
-            <p>
-              <b>Are you interested in fostering?</b> (required)
+            <p style="margin-bottom:0">
+                <b>Are you interested in fostering?</b> (required)
+                <div style="background-color: yellow;padding-top:3px;padding-bottom:3px">Please tell the Matchmaker if you are interested in foster
+                behavioral dogs or cats OR stop by the clinic (Building C) to foster
+                    medical cases</div>
             </p>
-            <div class="collection">
+            <div style="margin-top:0" class="collection">
               <a href="#!" class="collection-item">
                 <input type="radio" class="with-gap" name="fostering"
                        value="Yes" id="yes" />
